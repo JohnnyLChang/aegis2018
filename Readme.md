@@ -247,3 +247,15 @@ babyarm: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamicall
 
 it is arm 64 binary with all security feature enabled.
 
+
+### 心得
+神盾是個很奇怪的CTF......
+- 界面很難用很容易迷路
+- 很易被登出
+- 點了題目不知道怎麼回上一頁
+- 題目說明有跟沒有一樣
+- Web題要用工具打站
+- 比賽辦完要不到Writeup
+- 連題目要怎麼驗證都不知道
+
+網站連https都沒有綠色標籤 XD

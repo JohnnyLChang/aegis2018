@@ -280,3 +280,6 @@ babyarm: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamicall
 
 it is arm 64 binary with all security feature enabled.
 
+
+### 心得
+神盾是個很奇怪的CTF......

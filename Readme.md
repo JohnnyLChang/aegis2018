@@ -229,6 +229,39 @@ b8,bgr,lsb,Yx,prime .. file: PEX Binary Archive
 ```
 ------
 
+The hint says that green histogram right. It means that data is hidden in green layer using histogram shift method.
+This approach will find peak histogram and zero point for data hiding.
+
+However, Peak value is unknown. Therefore, we have to iterate from 0 to 255 and to find hidden data.
+While i=25:
+    pixel=25 -> 0
+	pixel=26 -> 1
+
+```
+from PIL import Image
+from numpy import *
+
+img = Image.open('./2018AEGIS_onion.bmp')
+arr = array(img)
+
+def decode(d):
+    unbin = ''
+    for i in range(0, len(d), 8):
+        unbin += chr(int(''.join(d[i:i+8]), base=2))
+    print(unbin)
+
+for i in range(255):
+    data = ''
+    for x in arr:
+        for y in x:
+            if y[1] == i:
+                data += '0'
+            elif y[1] == i+1:
+                data += '1'
+    decode(data)
+```
+flag AEGIS{7f9127ed733d948e39871a3b3afo2623}
+
 ## Arm pwn 100
 
 
